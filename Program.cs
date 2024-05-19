@@ -33,10 +33,7 @@ class Program
                     n++;
                     Console.WriteLine();
                 }
-                else if (!string.IsNullOrWhiteSpace(number))
-                {
-                    Console.WriteLine($"'{number}' geçerli bir sayı değil ve eklenemedi.");
-                }
+                else if (!string.IsNullOrWhiteSpace(number)) { Console.WriteLine($"'{number}' geçerli bir sayı değil ve eklenemedi."); }
             }
 
             gruplar[k] = grupListe;
@@ -76,10 +73,7 @@ class Program
         //SSE hesaplandı
         for (int i = 1; i <= k; i++)
         {
-            for (int j = 0; j < r[i - 1]; j++)
-            {
-                toplam += (gruplar[i][j] - Ort[i - 1]) * (gruplar[i][j] - Ort[i - 1]);
-            }
+            for (int j = 0; j < r[i - 1]; j++) { toplam += (gruplar[i][j] - Ort[i - 1]) * (gruplar[i][j] - Ort[i - 1]); }
         }
         SSE = toplam;
 
